@@ -1,0 +1,129 @@
+/* PC */
+@media screen and (min-width:992px) {
+    .mobile-header {
+        display: none;
+    }
+}   
+/* Tablet & Mobile */
+@media screen and (max-width:991px) {
+    .navbar ul {
+        display: none;
+    }
+    .navbar {
+        position:relative;
+    }
+    .navbar .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% , -50%);
+    }
+    .toggle-menu svg {
+        width: 24px;
+        color:#666;
+    }
+    .menu-overplay {
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease;
+    }
+    .menu-drawer {
+        position: fixed;
+        inset: 0 40% 0 0;
+       z-index: 2;
+       background: #fff;
+       transform: translateX(-100%);
+       padding: 60px;
+       transition: 0.5s ease;
+    }
+    .menu-checkbox:checked ~ .menu-overplay {
+        opacity: 1;
+        visibility: visible;
+    }
+    .menu-checkbox:checked ~ .menu-drawer {
+        transform: translateX(0);
+    }
+    .menu-drawer ul {
+        margin-top: 32px;
+    }
+    .menu-drawer ul a {
+        display: block;
+        color:#333;
+        padding: 14px 0;
+        font-weight: 500px;
+    }
+    .separate {
+        border-top: 1.5px solid #666 ;
+    }
+    .hero-img {
+        display: none;
+    }
+    .hero-wrap .info {
+        width: 70%;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .hero-wrap .desc {
+        width: 80%;
+        margin: 35px auto auto;
+    }
+    .clients .images {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .guide-item {
+        margin: 0;
+        flex:1;
+    }
+   .stats .row {
+    flex-direction: column;
+   }
+   .stats .img-block,
+    .stats .info {
+    width: 100%;
+    }
+    .stats .img-block {
+        margin-top: 80px;
+        order: 2;
+    }
+    .stats .info {
+        order: 1;
+        padding: 0;
+    }
+    .stats .sub-title {
+        width: 65%;
+    }
+    .stats .row-qty {
+        flex-direction: row;  
+    }
+    .stats .qty-desc {
+        font-size: 1.2rem;
+    }
+    .subscription .image {
+        display: none;
+    }
+    .footer .row-top {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+}
+/* Tablet */
+@media screen and (min-width:768px) and (max-width:991px) {
+    .hide-on-tablet {
+        display: none;
+    }
+}
+/* Mobile */
+@media screen and (max-width: 767px) {
+    .menu-drawer {
+        padding: 40px;
+        inset: 0 25% 0 0;
+    }
+    .navbar .actions {
+        display: none;
+    }
+}
